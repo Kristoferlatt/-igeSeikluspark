@@ -30,6 +30,10 @@ namespace Seikluspark.Controllers
         {
             return View(db.Seikluspark.ToList());
         }
+        public ActionResult sissetulek()
+        {
+            return View();
+        }
         public ActionResult ülevaade()
         {
             var model = db.Seikluspark.
@@ -61,7 +65,7 @@ namespace Seikluspark.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,inimesed,käepaelad")] park park)
+        public ActionResult Create([Bind(Include = "inimesed,käepaelad")] park park)
         {
             if (ModelState.IsValid)
             {

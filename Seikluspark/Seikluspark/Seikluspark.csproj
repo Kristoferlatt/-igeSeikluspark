@@ -194,10 +194,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\1.jpg" />
+    <Content Include="Content\black.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dfs.jpg" />
+    <Content Include="Content\Grey.jpg" />
+    <Content Include="Content\hahaha.png" />
+    <Content Include="Content\images.jpeg" />
+    <Content Include="Content\tere.jpg" />
+    <Content Include="Content\zydeco-scream.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -255,6 +263,7 @@
     <Content Include="Views\Seiklus\Edit.cshtml" />
     <Content Include="Views\Seiklus\Details.cshtml" />
     <Content Include="Views\Seiklus\osta.cshtml" />
+    <Content Include="Views\Seiklus\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

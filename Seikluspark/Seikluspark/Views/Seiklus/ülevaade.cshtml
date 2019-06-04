@@ -22,7 +22,19 @@
         <td>
             @Html.DisplayFor(modelItem => item.käepaelad)
         </td>
-        
+        <td>
+            @if (item.inimesed == item.käepaelad)
+            {
+                @:Terve Grupp võib osaleda meie atraktsioonidel.
+            }
+        </td>
+        <td>
+            @if (item.inimesed > item.käepaelad)
+            {
+                @:Kahjuks sellest grupist saavad atraktsioonidele minna ainult käepaelaga inimesed.
+            }
+        </td>
+
     </tr>
 }
 

@@ -4,13 +4,15 @@
     ViewBag.Title = "osta";
 }
 
-<h2>osta</h2>
+<h2>Seikluspargi pileti saad osta siit! Tordaid elamusi</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Osta Pilet</h4>
+        <h4>*Siin saab registreerida oma grupi ja osta käepaelad.</h4>
+        <h4> *Inimei võib grupis olla rohkem kui ostetud käepaelu.</h4>
+        <h4> *Inimesed kellel puudub käepael saavad kahjuks ainult ringi vaadata meie seikluspargis kuid ei pääses atraksioonidele.</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -18,6 +20,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.inimesed, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.inimesed, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.käepaelad, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.käepaelad, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.käepaelad, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
         <div class="form-group">
