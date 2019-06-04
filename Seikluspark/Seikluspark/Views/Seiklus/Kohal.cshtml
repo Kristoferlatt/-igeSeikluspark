@@ -1,4 +1,4 @@
-﻿@model Seikluspark.Models.park
+﻿@model IEnumerable<Seikluspark.Models.park>
 
 @{
     ViewBag.Title = "Kohal";
@@ -27,7 +27,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.käepaelad)
             </td>
-            
+
         </tr>
     }
 
