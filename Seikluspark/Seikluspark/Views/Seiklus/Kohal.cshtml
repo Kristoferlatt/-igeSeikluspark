@@ -1,0 +1,34 @@
+﻿@model Seikluspark.Models.park
+
+@{
+    ViewBag.Title = "Kohal";
+}
+
+<h2>Kohal</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.inimesed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.käepaelad)
+        </th>
+
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.inimesed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.käepaelad)
+            </td>
+            
+        </tr>
+    }
+
+    </table>
