@@ -11,5 +11,6 @@ namespace Seikluspark.Models
         public int Id { get; set; }
         public int inimesed { get; set; }
         public int käepaelad { get; set; }
+        public int osta { get; set; }
     }
 }
