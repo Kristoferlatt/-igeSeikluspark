@@ -36,9 +36,7 @@ namespace Seikluspark.Controllers
         }
         public ActionResult ülevaade()
         {
-            var model = db.Seikluspark.
-               ToList();
-            return View(model);
+            return View(db.Seikluspark.ToList());
         }
         public ActionResult Details(int? id)
         {
@@ -53,6 +51,20 @@ namespace Seikluspark.Controllers
             }
             return View(park);
         }
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult osta([Bind(Include = "Id,inimesed,käepaelad")] park park)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Seikluspark.Add(park);
+                db.SaveChanges();
+                return RedirectToAction("ülevaade");
+            }
+
+            return View(park);
+        }
 
         // GET: Jalgrattaeksams/Create
         public ActionResult Create()
@@ -65,36 +77,18 @@ namespace Seikluspark.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "inimesed,käepaelad")] park park)
+        public ActionResult Create([Bind(Include = "Id,inimesed,käepaelad")] park park)
         {
             if (ModelState.IsValid)
             {
                 db.Seikluspark.Add(park);
                 db.SaveChanges();
-                return RedirectToAction("Kohal");
+                return RedirectToAction("ülevaade");
             }
 
             return View(park);
         }
-        
 
-        // POST: Jalgrattaeksams/Register
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public ActionResult osta([Bind(Include = "inimesed,käepaelad")] park park)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Seikluspark.Add(park);
-                db.SaveChanges();
-                return RedirectToAction("Kohal");
-            }
-
-            return View(park);
-        }
         // GET: Jalgrattaeksams/Edit/5
         public ActionResult Edit(int? id)
         {

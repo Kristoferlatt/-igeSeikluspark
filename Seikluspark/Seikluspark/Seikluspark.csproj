@@ -259,11 +259,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Seiklus\Kohal.cshtml" />
     <Content Include="Views\Seiklus\ülevaade.cshtml" />
-    <Content Include="Views\Seiklus\Create.cshtml" />
     <Content Include="Views\Seiklus\Edit.cshtml" />
     <Content Include="Views\Seiklus\Details.cshtml" />
     <Content Include="Views\Seiklus\osta.cshtml" />
     <Content Include="Views\Seiklus\Delete.cshtml" />
+    <Content Include="Views\Seiklus\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
