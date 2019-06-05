@@ -66,13 +66,13 @@ namespace Seikluspark.Controllers
             return View(park);
         }
 
-        // GET: Jalgrattaeksams/Create
+        // GET: SeiklusPark/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Jalgrattaeksams/Create
+        // POST: Seikluspark/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace Seikluspark.Controllers
             return View(park);
         }
 
-        // GET: Jalgrattaeksams/Edit/5
+        // GET: Seikluspark/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace Seikluspark.Controllers
             return View(park);
         }
 
-        // POST: Jalgrattaeksams/Edit/5
+        // POST: Seikluspark/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -119,7 +119,7 @@ namespace Seikluspark.Controllers
             }
             return View(park);
         }
-        // GET: Jalgrattaeksams/Edit/5
+        // GET: Seikluspark/Edit/5
         public ActionResult TheoryResult(int? id)
         {
             if (id == null)
@@ -133,7 +133,7 @@ namespace Seikluspark.Controllers
             }
             return View(park);
         }
-        // GET: Jalgrattaeksams/Delete/5
+        // GET: Seikluspark/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -148,7 +148,7 @@ namespace Seikluspark.Controllers
             return View(park);
         }
 
-        // POST: Jalgrattaeksams/Delete/5
+        // POST: Seikluspark/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

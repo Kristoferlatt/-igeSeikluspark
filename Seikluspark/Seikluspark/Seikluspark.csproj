@@ -204,6 +204,7 @@
     <Content Include="Content\Grey.jpg" />
     <Content Include="Content\hahaha.png" />
     <Content Include="Content\images.jpeg" />
+    <Content Include="Content\logo.jpg" />
     <Content Include="Content\tere.jpg" />
     <Content Include="Content\zydeco-scream.jpg" />
     <Content Include="favicon.ico" />
